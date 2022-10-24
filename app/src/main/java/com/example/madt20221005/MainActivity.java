@@ -45,9 +45,7 @@ public class MainActivity extends AppCompatActivity {
             if(TextUtils.isEmpty(this.edPhrase.getText().toString())){
                 Toast.makeText(getApplicationContext(),"String is empty",Toast.LENGTH_LONG).show();
             }else{
-                String[] words = this.edPhrase.getText().toString().split("\\s+");
-                int length = words.length;
-                String convert = String.valueOf(length);
+                String convert = String.valueOf(TextCounter.countWordsUsingSplit(this.edPhrase.getText().toString()));
                 this.tvMain.setText(convert);
             }
         }
